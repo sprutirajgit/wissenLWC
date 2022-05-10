@@ -1,0 +1,23 @@
+<template>
+        <lightning-card title="Wissen Salesforce Coe Team Profile" icon-name="custom:custom103">
+         <div class="slds-p-around_medium wrapper">
+        <div class="content">
+            <template if:true={TeamProfile.data}>
+                <template for:each={TeamProfile.data} for:item="teams">
+                    <p key={teams.Id} style="padding: 10px; ">
+                        <lightning-card class="card">
+    <lightning-icon icon-name="utility:edit" slot="actions" onclick={navigateToEditAccountPage} data-id={teams.Id}></lightning-icon><br/>
+                  <img src={teams.File__c} /><br/>
+                 {teams.Full_Name__c}<br/>
+                 Emp id: {teams.Emp_ID__c}<br/>
+              </lightning-card>
+              </p>
+                </template>
+            </template>
+            <template if:true={TeamProfile.error}>
+                {TeamProfile.error}
+            </template>
+     </div>
+      </div>
+       </lightning-card>
+     </template>

@@ -1,0 +1,27 @@
+<template>
+    <div class="header">
+    <lightning-card title="Mood Your Express" icon-name="custom:custom5" >
+       
+        <div class="slds-m-around_medium">
+    <lightning-combobox
+            name="progress"
+            label="Mood Express"
+            value={value}
+            placeholder="Select Progress"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+            </div>
+        </lightning-card>
+        </div>
+<lightning-card >
+    <div class="slds-m-around_medium" >
+    <p> {value}</p>
+    <template if:true={sad}><c-sad ></c-sad></template>
+    <template if:true={happy}><c-happy></c-happy></template>
+    <template if:true={ok}><c-ok></c-ok></template>
+    <template if:true={tension}> <c-tension></c-tension></template>
+     
+    </div>
+</lightning-card>
+    
+</template>

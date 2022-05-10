@@ -1,0 +1,13 @@
+content{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(84, 14, 245);
+    text-align: center;
+    font-weight: bold;
+    flex-grow: initial;
+
+}
+.wrapper{
+    background: blanchedalmond;
+}

@@ -1,0 +1,14 @@
+p{
+    color: brown;
+    font-weight: bold;
+    text-align: center;
+    font-size: x-large;
+
+}
+.card {
+    background-color: transparent;
+    width: 1000px;
+    height: 500px;
+    background-image: url('/resource/finish');
+   
+}

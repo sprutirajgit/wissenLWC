@@ -1,0 +1,36 @@
+<template>
+  
+  <lightning-card title="contact" icon-name="standard:contact" >
+    <div class="slds-p-around_small">
+      <lightning-input  type="search"  label="Search Contact Name" 
+      onchange={handleSearch} value={searchValue}  placeholder="Search"></lightning-input>
+   </div>
+      <div class="slds-p-around_medium wrapper">
+                <div class="content">
+                 
+      <template for:each={contactsRecord} for:item="con">
+        
+      <p key={con.Id} style="padding: 10px;">
+        
+        <lightning-card >
+         
+          <lightning-icon icon-name="utility:edit" slot="actions" onclick={navigateToEditContactPage} data-id={con.Id}></lightning-icon><br/>
+       
+        <img src={con.avatar__c} /><br/>
+        
+     {con.Name}<br/>
+        Title: {con.Title}<br/>
+       
+        </lightning-card>
+      
+                </p>
+                
+                        </template>
+                      </div>
+                        </div>
+    
+     
+    </lightning-card>
+    
+  </template>
+

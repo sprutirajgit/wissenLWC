@@ -1,0 +1,29 @@
+.customIcon{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    
+}
+.h1{
+    font-size: medium;
+    font-weight: bold;
+    color: brown;
+    text-align: center;
+}
+.customIcons{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+.customIcon1{
+    width: 70px;
+    height: 95px;
+    margin: 10px;
+    align-items: center;
+}
+.customIcon2{
+    width: 70px;
+    height: 80px;
+    margin: 10px;
+    align-items: right;
+}

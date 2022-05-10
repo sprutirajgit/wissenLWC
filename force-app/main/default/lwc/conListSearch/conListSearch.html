@@ -1,0 +1,32 @@
+<template>
+   
+    <lightning-card title="contact" icon-name="standard:contact" >
+        <div class="slds-p-around_small">
+            <lightning-input label="Search Contact" type="search" value={searchKey} onchange={handleInput}></lightning-input>
+            <lightning-combobox
+            name="progress"
+            label="Select Level"
+            value={SelectedGender}
+            placeholder="choose ur Gender"
+            options={LevelOptions}
+            onchange={handleChange} ></lightning-combobox>
+         </div>
+            <div class="slds-p-around_medium wrapper">
+                      <div class="content">
+            <template for:each={contactsRecord} for:item="con">
+            <p key={con.Id} style="padding: 10px;">
+              <lightning-card >
+              
+              <img src={con.avatar__c} height="100px" width="100px"/><br/>
+                {con.Name}<br/>
+              Gender: {con.Gender__c}<br/>
+              Department : {con.Department}<br/>
+              </lightning-card>
+                      </p>
+                </template>
+                            </div>
+                              </div>
+
+        </lightning-card>
+      
+</template>

@@ -1,0 +1,16 @@
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Times New Roman', Times, serif;
+    color: brown;
+    text-align: center;
+    font-weight: bold;
+}
+.wrapper{
+    background: blanchedalmond;
+    background-image: url('/resource/team_back');
+}
+img{
+    height: 100px;
+    width: 100px;
+}

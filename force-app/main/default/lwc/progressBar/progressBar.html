@@ -1,0 +1,45 @@
+<template>
+    <div class="slds-page-header" role="banner">
+        <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate">
+           SALES PROCESS
+        </h1>
+        <div class="slds-text-color--weak">by Sales team</div>
+    </div>
+    <div class="slds-theme_default">
+        <div class="slds-p-around_medium">
+            <lightning-progress-indicator type="path" current-step={selectedStep}>
+                <lightning-progress-step label="Creation of account " onstepfocus={selectStep1} value="Step1">
+                </lightning-progress-step>
+                <lightning-progress-step label="Creation of Contact" onstepfocus={selectStep2} value="Step2">
+                </lightning-progress-step>
+                <lightning-progress-step label="Creation of Opportunity " onstepfocus={selectStep3} value="Step3">
+                </lightning-progress-step>
+                <lightning-progress-step label="Finished" onstepfocus={selectStep4} value="Step4">
+                </lightning-progress-step>
+             </lightning-progress-indicator>
+           
+            <div class="slds-m-vertical_medium">
+                <lightning-button label="Back" class="slds-m-left_x-small" onclick={handlePrev}></lightning-button>
+                <template if:true={isSelectStep1}>
+                    <lightning-button variant="brand" class="slds-m-left_x-small" label="Next" onclick={handleNext}></lightning-button>
+                    <c-account-card></c-account-card>
+                    <c-acc-Mod></c-acc-Mod>
+                 </template>
+                 <template if:true={isSelectStep2}>
+                    <lightning-button variant="brand" class="slds-m-left_x-small" label="Next" onclick={handleNext}></lightning-button>
+                    <c-contact-card></c-contact-card>
+                    <c-con-Mod></c-con-Mod>
+                 </template>
+                 <template if:true={isSelectStep3}>
+                    <lightning-button variant="brand" class="slds-m-left_x-small" label="Next" onclick={handleNext}></lightning-button>
+                  <c-opp-Card></c-opp-Card>
+                  <c-opp-Mod></c-opp-Mod>
+                 </template>
+                <template if:true={isSelectStep4}>
+                    <lightning-button variant="brand" class="slds-m-left_x-small" label="Finish" onclick={handleFinish}></lightning-button>
+                    <c-finish></c-finish>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

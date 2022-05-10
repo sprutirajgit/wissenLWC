@@ -1,0 +1,128 @@
+<template>
+    <div class="slds-var-p-horizontal_x-small">
+        <div class="slds-card__header slds-grid">
+    <lightning-card variant="narrow">
+                            <h3 slot="title">
+                     <img src={photo} alt="photoIcon"  class="customIcon1">
+                     <img src={badge} alt="badgeIcon"  class="customIcon2" >
+                     </h3>
+                    <h1 slot="title">Sprutiraj Panda</h1>
+                    <p class="slds-p-horizontal_small">Jr.Software Engineer(Salesforce)</p>
+                    <p class="slds-p-horizontal_small">Emp.Id-05148</p>
+                    <p class="slds-p-horizontal_small">Report To-Obul Reddy Yerasi (1295)</p>
+                    <lightning-button variant="brand" 
+                    label="More Details"
+                    title="More Details"
+                    onclick={openModal}
+                    class="slds-m-left_x-small">
+                    </lightning-button>
+                    <template if:true={isModalOpen}>
+                        <!-- Modal/Popup Box LWC starts here -->
+                        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                            <div class="slds-modal__container">
+                                <!-- Modal/Popup Box LWC header here -->
+                                <header class="slds-modal__header">
+                                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                                        <lightning-icon icon-name="utility:close"
+                                            alternative-text="close"
+                                            variant="inverse"
+                                            size="small" ></lightning-icon>
+                                        <span class="slds-assistive-text">Close</span>
+                                    </button>
+                                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">overview</h2>
+                                </header>
+                                <!-- Modal/Popup Box LWC body starts here -->
+                                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                    <div class="slds-card__body">
+                                        <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered slds-table_fixed-layout" role="grid">
+                                            <thead>
+                                                <tr class="slds-line-height_reset">
+                                                    <th class="" scope="col">
+                                                        <div class="slds-truncate" title="Name">Address</div>
+                                                    </th>
+                                                    <th class="" scope="col">
+                                                        <div class="slds-truncate" title="Company">Sunabeda-1,koraput,odisha,pin-763001</div>
+                                                    </th>
+                                                </tr>
+                                                <tr class="slds-line-height_reset">
+                                                    <th class="" scope="col">
+                                                        <div class="slds-truncate" title="Email">Email:id</div>
+                                                    </th>
+                                                    <th class="" scope="col">
+                                                        <div>
+                                                            <p><lightning-formatted-email value="sprutiraj.panda@wisseninfotech.com"></lightning-formatted-email></p>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                                <tr class="slds-line-height_reset">
+                                                    <th class="" scope="col">
+                                                        <div class="slds-truncate" title="Phone">Mobile No.</div>
+                                                    </th>
+                                                    <th class="" scope="col">
+                                                        <div>
+                                                            <p><lightning-formatted-phone value="7892148285" icon-name="action:call"></lightning-formatted-phone></p>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                                <tr class="slds-line-height_reset">
+                                                    <th class="" scope="col">
+                                                        <div class="slds-truncate" title="Certified">Certified</div>
+                                                    </th>
+                                                    <th class="" scope="col">
+                                                        <h3 slot="title">
+                                                            <img src={adm201} alt="adm201Icon"  class="customIcon" title="Salesforce ADM 201 Certified">
+                                                            <img src={pd1} alt="pd1Icon"  class="customIcon" title="Salesforce PD1 Certified">
+                                                            <img src={ranger} alt="rangerIcon"  class="customIcon" title="Salesforce Trailhead Ranger Certified">
+                                                        </h3>
+                                                    </th>
+                                                </tr>
+                                                <tr class="slds-line-height_reset">
+                                                    <th class="" scope="col">
+                                                        <div class="slds-truncate" title="Family">Family Details</div>
+                                                    </th>
+                                                    <th class="" scope="col">
+                                                        <h3 slot="title">
+                                                            <img src={man} alt="manIcon"  class="customIcons" title="Father:Rabindar nath panda" >
+                                                            <img src={boy} alt="boyIcon"  class="customIcons" title="Brother:-Jugal raj Panda">
+                                                            <img src={girl} alt="girlIcon"  class="customIcons" title="Mother:-Ranjita Kumari Panda">
+                                                        </h3>
+                                                    </th>
+                                                </tr>
+                                                <tr class="slds-line-height_reset">
+                                                    <th class="" scope="col">
+                                                        <div class="slds-truncate" title="Family">Personal Details</div>
+                                                    </th>
+                                                    <th class="" scope="col">
+                                                        DOB:15th may 1994<br/>
+                                                        Nationality :-Indain<br/>
+                                                    </th>
+                                                </tr>
+                                                <tr class="slds-line-height_reset">
+                                                    <th class="" scope="col">
+                                                        <div class="slds-truncate" title="Family">Education Details</div>
+                                                    </th>
+                                                    <th class="" scope="col">
+                                                        Scholing in SSVM,Sunabeda-1<br/>
+                                                        12th In Gayatri Junior college,Odisha<br/>
+                                                        BE-Tech in Mechanical Engineer at SMIT college<br/>
+                                                        Under BPUT university<br/>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            </table>
+                                            </div>
+                                </div>
+                                <!-- Modal/Popup Box LWC footer starts here -->
+                                <footer class="slds-modal__footer">
+                                    <button class="slds-button slds-button_neutral" onclick={closeModal} title="Cancel">Cancel</button>
+                                    <button class="slds-button slds-button_brand" onclick={submitDetails} title="OK">OK</button>
+                                </footer>
+                            </div>
+                        </section>
+                        <div class="slds-backdrop slds-backdrop_open"></div>
+                    </template>
+                    
+    </lightning-card>
+    </div>
+</div>
+</template>

@@ -1,0 +1,14 @@
+<template>
+   <lightning-card>
+       <h3 slot="title">
+           <lightning-icon icon-name="standard:account" size="small"></lightning-icon>Search Account 
+       </h3>
+       <p class="slds-p-horizontal_small">
+           <lightning-input type="search" label="search" onchange={handelkeyChange} value={accountName}></lightning-input>
+       </p>
+       <template for:each={accountList} for:item="accObj" for:index="index">
+           <option key={accObj.id}>{accObj.Name}</option>
+       </template>
+   </lightning-card>
+         
+</template>

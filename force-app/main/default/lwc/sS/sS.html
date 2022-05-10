@@ -1,0 +1,54 @@
+<template>
+    <div class="slds-col">
+        <span>
+            <div class="slds-m-around_x-small">
+    <div class="slds-box slds-box_small">
+    <lightning-avatar src="/bad/image/url.jpg" initials="SS" 
+                       fallback-icon-name="custom:custom72" 
+                       alternative-text="Salesforce"
+                        onclick={openModal}
+                        class="slds-m-right_small">
+                    </lightning-avatar>
+                    <b><p>Srinivas Sudershan</p></b>  
+                    <b><p> Lead Engineer</p></b>
+                </div>
+                        <template if:true={isModalOpen}>
+                            <!-- Modal/Popup Box LWC starts here -->
+                            <section role="dialog" tabindex="0" aria-labelledby="modal-heading-02" aria-modal="true" aria-describedby="modal-content-id-2" class="slds-modal slds-fade-in-open">
+                                <div class="slds-modal__container">
+                                    <!-- Modal/Popup Box LWC header here -->
+                                    <header class="slds-modal__header">
+                                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                                            <lightning-icon icon-name="utility:close"
+                                                alternative-text="close"
+                                                variant="inverse"
+                                                size="small" ></lightning-icon>
+                                            <span class="slds-assistive-text">Close</span>
+                                        </button>
+                                        <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate">Overview</h2>
+                                    </header>
+                                    <!-- Modal/Popup Box LWC body starts here -->
+                                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                                        Name:-Srinivas Sudershan<br/>
+                                                                       Job Title:-Lead Engineer<br/>
+                                                                       Department:-IT Support<br/>
+                                                                       <div>
+                                                                        <p><lightning-formatted-email value="srinivas.sudershan@wisseninfotech.com"></lightning-formatted-email></p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <p><lightning-formatted-phone value="919948076305" icon-name="action:call"></lightning-formatted-phone></p>
+                                                                    </div>
+                                                                       Business Area:-Wissen Hyderabad<br/>
+                                    </div>
+                                    <footer class="slds-modal__footer">
+                                        <button class="slds-button slds-button_neutral" onclick={closeModal} title="Cancel">Cancel</button>
+                                        <button class="slds-button slds-button_brand" onclick={submitDetails} title="OK">OK</button>
+                                    </footer>
+                                </div>
+                            </section>
+                            <div class="slds-backdrop slds-backdrop_open"></div>
+                        </template>
+                        </div>
+                        </span>
+</div>
+</template>
